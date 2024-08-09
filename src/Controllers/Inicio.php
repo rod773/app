@@ -9,13 +9,10 @@ use Libs\Controller;
 
 class Inicio extends Controller{
 
-    public function __construct($data){
+    public function __construct(){
 
         
-
-        parent::__construct();
-
-        $this->exists(['email','phone'],$data);
+        $this->exists(['email','phone']);
 
         $this->response(["message"=>"hello world"]);
 

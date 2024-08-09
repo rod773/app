@@ -16,7 +16,6 @@ class Inicio extends Controller{
         $this->exists(['email','phone']);
 
 
-        //parent::__construct();
 
         $this->exists(['email','phone'],$data);
 

@@ -17,7 +17,13 @@ $router->get("/users",function(){
     ]);
 });
 
-// Custom 404 Handler
+$router->post("/users/{id}",function($id){
+    echo json_encode([
+        "message" => "Users Saved $id"
+    ]);
+});
+
+
 $router->set404(function(){
 	echo json_encode([
         "message" => "404 Not Found"

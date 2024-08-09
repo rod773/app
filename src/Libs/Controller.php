@@ -20,7 +20,7 @@ class Controller{
 
         $missing = array_diff($parameters,array_keys($data));
 
-        if($missing){
+        if(!empmty($missing)){
             
         }
 

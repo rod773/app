@@ -8,4 +8,8 @@ use Libs\Controller;
 
 class Inicio extends Controller{
 
+    public function __construct(){
+
+    }
+
 }

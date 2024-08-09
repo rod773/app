@@ -8,10 +8,11 @@ $router = new Router();
 
 $router->get("/",function(){
 
-  echo  json_decode([
+  echo  json_encode([
     "message" => "hola Mundo"
   ]);
 });
+
 
 
 $router->put("/",function(){
@@ -20,9 +21,6 @@ $router->put("/",function(){
     //var_dump($data);
     new Inicio($data);
 });
-
-
-
 
 
 

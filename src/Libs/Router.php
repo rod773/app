@@ -5,6 +5,15 @@ use Bramus\Router\Router;
 
 $router = new Router();
 
+
+$router->get("/",function(){
+
+  echo  json_decode([
+    "message" => "hola Mundo"
+  ]);
+});
+
+
 $router->put("/",function(){
 
     $data = json_decode(file_get_contents('php://input'),true);

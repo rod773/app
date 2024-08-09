@@ -13,7 +13,7 @@ class Inicio extends Controller{
 
         
 
-        parent::__construct();
+        //parent::__construct();
 
         $this->exists(['email','phone'],$data);
 

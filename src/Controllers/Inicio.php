@@ -11,6 +11,8 @@ class Inicio extends Controller{
 
     public function __construct($data){
 
+        var_dump($data);
+
         parent::__construct();
 
         $this->exists(['email','phone'],$data);

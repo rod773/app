@@ -19,7 +19,11 @@ $router->put("/",function(){
 
     $data = json_decode(file_get_contents('php://input'),true);
     //var_dump($data);
+    if($data)
     new Inicio($data);
+    else echo json_encode([
+        "message" => "No data"
+    ]);
 });
 
 

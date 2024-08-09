@@ -23,7 +23,7 @@ class Controller{
 
     }
 
-    public function exists(array $data, array $parameters){
+    public function exists(array $parameters, array $data){
 
         $missing = array_diff($parameters,array_keys($data));
 

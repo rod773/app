@@ -12,7 +12,14 @@ class Inicio extends Controller{
     public function __construct(){
 
         
+
         $this->exists(['email','phone']);
+
+
+        //parent::__construct();
+
+        $this->exists(['email','phone'],$data);
+
 
         $this->response(["message"=>"hello world"]);
 

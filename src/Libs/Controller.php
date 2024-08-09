@@ -4,6 +4,12 @@ namespace  Libs;
 
 class Controller{
 
+    public $data;
+
+    public function __construct(){
+        $this->data = json_decode(file_get_contents('php://input'),true);
+    }
+
     public function response(array $data, int $code=200){
 
          http_response_code($code);
@@ -29,6 +35,10 @@ class Controller{
 
         return true;
 
+    }
+
+    public function isEmpty(){
+        
     }
 
 }

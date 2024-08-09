@@ -17,11 +17,11 @@ $router->get("/users",function(){
     ]);
 });
 
+// Custom 404 Handler
 $router->set404(function(){
-    echo json_encode([
+	echo json_encode([
         "message" => "404 Not Found"
     ]);
 });
-
 
 $router->run();

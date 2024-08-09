@@ -11,5 +11,17 @@ $router->get("/",function(){
     ]);
 });
 
+$router->get("/users",function(){
+    echo json_encode([
+        "message" => "Lista Usuarios"
+    ]);
+});
+
+$router->set404(function(){
+    echo json_encode([
+        "message" => "404 Not Found"
+    ]);
+});
+
 
 $router->run();

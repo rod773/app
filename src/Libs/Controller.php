@@ -43,10 +43,11 @@ class Controller{
     public function isEmpty(){
 
         $data = $this->data;
-        
+        $aux = [];
+        $string = "Parameter is empmty";
         foreach($data as $param){
             if(empty($data[$param])){
-                return false;
+                $string .= $data[$param];
             }
         }
     }

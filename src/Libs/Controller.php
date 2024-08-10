@@ -59,6 +59,8 @@ class Controller{
                 "message" => "Parameters is empty : $string"
             ]);
         }
+
+        return true;
     }
 
 }

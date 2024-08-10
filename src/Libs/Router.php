@@ -17,6 +17,8 @@ $router->get("/",function(){
 
 $router->put("/",function(){
 
+   var_dump(json_decode(file_get_contents('php://input'),true));
+
    new Inicio();
     
 });

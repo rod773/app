@@ -14,7 +14,7 @@ class Inicio extends Controller{
         parent::__construct();
 
         $this->exists(['email','phone']);
-
+        
 
         $this->response(["message"=>$this->data]);
 

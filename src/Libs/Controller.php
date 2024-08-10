@@ -47,9 +47,9 @@ class Controller{
         $data = $this->data;
         $aux = [];
        
-        foreach($data as $param){
+        foreach($data as $key => $param){
             if(empty($data[$param])){
-                $aux .= $data[$param];
+                $aux[] = $key;
             }
         }
 

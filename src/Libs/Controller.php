@@ -44,11 +44,20 @@ class Controller{
 
         $data = $this->data;
         $aux = [];
-        $string = "Parameter is empmty";
+       
         foreach($data as $param){
             if(empty($data[$param])){
-                $string .= $data[$param];
+                $aux .= $data[$param];
             }
+        }
+
+        if(!empty($aux)){
+
+            $string = implode(",", $aux);
+
+            $this->response([
+                "message" => "Parameters is empty : $string"
+            ]);
         }
     }
 

@@ -6,6 +6,10 @@ class Controller{
 
     public $data;
 
+    public function __construct(){
+        $this->data = json_decode(file_get_contents('php://input'),true);
+    }
+
    
     public function response(array $data, int $code=200){
 
@@ -19,7 +23,7 @@ class Controller{
 
     public function exists(array $parameters){
 
-        $this->data = json_decode(file_get_contents('php://input'),true);
+        
 
         $missing = array_diff($parameters,array_keys($this->data));
 
@@ -37,7 +41,14 @@ class Controller{
     }
 
     public function isEmpty(){
+
+        $data = $this->data;
         
+        foreach($data as $param){
+            if(empty($data[$param])){
+                return false;
+            }
+        }
     }
 
 }

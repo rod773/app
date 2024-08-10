@@ -36,6 +36,8 @@ class Controller{
             ]);
         }
 
+        $this->isEmpty();
+
         return true;
 
     }
